@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BB77A107B7FBA2240CE41581F3803C02F166C982",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BB77A107B7FBA2240CE41581F3803C02F166C982" : 9223372036854775807,
+    "7674F9B4FD507C97B2D79B7BFAE910BF0F13A5FA" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "85B11DD0-F719-492F-BB85-FF66431A5F24",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BB77A107B7FBA2240CE41581F3803C02F166C982" : "Stopwatch\/",
+    "7674F9B4FD507C97B2D79B7BFAE910BF0F13A5FA" : "RxExtensions\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Stopwatch",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Stopwatch.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DianQK\/RxExtensions.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7674F9B4FD507C97B2D79B7BFAE910BF0F13A5FA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DianQK\/Stopwatch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BB77A107B7FBA2240CE41581F3803C02F166C982"
+    }
+  ]
+}

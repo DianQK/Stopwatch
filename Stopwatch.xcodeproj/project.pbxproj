@@ -12,6 +12,7 @@
 		26246E241D810A5A00F44CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26246E221D810A5A00F44CDA /* Main.storyboard */; };
 		26246E261D810A5A00F44CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26246E251D810A5A00F44CDA /* Assets.xcassets */; };
 		26246E291D810A5A00F44CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26246E271D810A5A00F44CDA /* LaunchScreen.storyboard */; };
+		264536681D83002B00BFD073 /* Cell+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264536671D83002B00BFD073 /* Cell+Rx.swift */; };
 		26660A631D81CB22007442E2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A5F1D81CB22007442E2 /* RxSwift.framework */; };
 		26660A641D81CB22007442E2 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A5F1D81CB22007442E2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26660A651D81CB22007442E2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A601D81CB22007442E2 /* RxCocoa.framework */; };
@@ -44,6 +45,7 @@
 		26246E251D810A5A00F44CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26246E281D810A5A00F44CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26246E2A1D810A5A00F44CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		264536671D83002B00BFD073 /* Cell+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+Rx.swift"; sourceTree = "<group>"; };
 		26660A5F1D81CB22007442E2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		26660A601D81CB22007442E2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		26660A611D81CB22007442E2 /* RxAutomaton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAutomaton.framework; path = Carthage/Build/iOS/RxAutomaton.framework; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		26246E1D1D810A5A00F44CDA /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				264536671D83002B00BFD073 /* Cell+Rx.swift */,
 				26246E1E1D810A5A00F44CDA /* AppDelegate.swift */,
 				26246E201D810A5A00F44CDA /* ViewController.swift */,
 				26246E221D810A5A00F44CDA /* Main.storyboard */,
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26246E211D810A5A00F44CDA /* ViewController.swift in Sources */,
+				264536681D83002B00BFD073 /* Cell+Rx.swift in Sources */,
 				26246E1F1D810A5A00F44CDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
