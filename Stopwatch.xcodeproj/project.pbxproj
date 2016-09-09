@@ -12,8 +12,12 @@
 		26246E241D810A5A00F44CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26246E221D810A5A00F44CDA /* Main.storyboard */; };
 		26246E261D810A5A00F44CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26246E251D810A5A00F44CDA /* Assets.xcassets */; };
 		26246E291D810A5A00F44CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26246E271D810A5A00F44CDA /* LaunchScreen.storyboard */; };
-		26660A631D81CB22007442E2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A5F1D81CB22007442E2 /* RxSwift.framework */; };
-		26660A641D81CB22007442E2 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A5F1D81CB22007442E2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2636D9801D83144A00331745 /* FinalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636D97F1D83144A00331745 /* FinalViewModel.swift */; };
+		2636D9841D83AD6900331745 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636D9831D83AD6900331745 /* Button+Style.swift */; };
+		2636D9B71D83F81C00331745 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2636D9B61D83F81C00331745 /* RxSwift.framework */; };
+		2636D9B81D83F81C00331745 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2636D9B61D83F81C00331745 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2636D9BE1D83F89000331745 /* RxExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2636D9BD1D83F89000331745 /* RxExtensions.framework */; };
+		2636D9BF1D83F89000331745 /* RxExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2636D9BD1D83F89000331745 /* RxExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26660A651D81CB22007442E2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A601D81CB22007442E2 /* RxCocoa.framework */; };
 		26660A661D81CB22007442E2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A601D81CB22007442E2 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26660A671D81CB22007442E2 /* RxAutomaton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A611D81CB22007442E2 /* RxAutomaton.framework */; };
@@ -27,9 +31,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2636D9BF1D83F89000331745 /* RxExtensions.framework in Embed Frameworks */,
+				2636D9B81D83F81C00331745 /* RxSwift.framework in Embed Frameworks */,
 				26660A661D81CB22007442E2 /* RxCocoa.framework in Embed Frameworks */,
 				26660A681D81CB22007442E2 /* RxAutomaton.framework in Embed Frameworks */,
-				26660A641D81CB22007442E2 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +49,10 @@
 		26246E251D810A5A00F44CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26246E281D810A5A00F44CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26246E2A1D810A5A00F44CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26660A5F1D81CB22007442E2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2636D97F1D83144A00331745 /* FinalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewModel.swift; sourceTree = "<group>"; };
+		2636D9831D83AD6900331745 /* Button+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button+Style.swift"; sourceTree = "<group>"; };
+		2636D9B61D83F81C00331745 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2636D9BD1D83F89000331745 /* RxExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxExtensions.framework; path = Carthage/Build/iOS/RxExtensions.framework; sourceTree = "<group>"; };
 		26660A601D81CB22007442E2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		26660A611D81CB22007442E2 /* RxAutomaton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAutomaton.framework; path = Carthage/Build/iOS/RxAutomaton.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,9 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2636D9BE1D83F89000331745 /* RxExtensions.framework in Frameworks */,
+				2636D9B71D83F81C00331745 /* RxSwift.framework in Frameworks */,
 				26660A651D81CB22007442E2 /* RxCocoa.framework in Frameworks */,
 				26660A671D81CB22007442E2 /* RxAutomaton.framework in Frameworks */,
-				26660A631D81CB22007442E2 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +75,8 @@
 		26246E121D810A5A00F44CDA = {
 			isa = PBXGroup;
 			children = (
-				26660A5F1D81CB22007442E2 /* RxSwift.framework */,
+				2636D9BD1D83F89000331745 /* RxExtensions.framework */,
+				2636D9B61D83F81C00331745 /* RxSwift.framework */,
 				26660A601D81CB22007442E2 /* RxCocoa.framework */,
 				26660A611D81CB22007442E2 /* RxAutomaton.framework */,
 				26246E1D1D810A5A00F44CDA /* Stopwatch */,
@@ -85,14 +95,24 @@
 		26246E1D1D810A5A00F44CDA /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
-				26246E1E1D810A5A00F44CDA /* AppDelegate.swift */,
+				2636D9C01D83FA6100331745 /* unimportant */,
 				26246E201D810A5A00F44CDA /* ViewController.swift */,
+				2636D97F1D83144A00331745 /* FinalViewModel.swift */,
+			);
+			path = Stopwatch;
+			sourceTree = "<group>";
+		};
+		2636D9C01D83FA6100331745 /* unimportant */ = {
+			isa = PBXGroup;
+			children = (
+				26246E1E1D810A5A00F44CDA /* AppDelegate.swift */,
+				2636D9831D83AD6900331745 /* Button+Style.swift */,
 				26246E221D810A5A00F44CDA /* Main.storyboard */,
 				26246E251D810A5A00F44CDA /* Assets.xcassets */,
 				26246E271D810A5A00F44CDA /* LaunchScreen.storyboard */,
 				26246E2A1D810A5A00F44CDA /* Info.plist */,
 			);
-			path = Stopwatch;
+			name = unimportant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2636D9801D83144A00331745 /* FinalViewModel.swift in Sources */,
 				26246E211D810A5A00F44CDA /* ViewController.swift in Sources */,
+				2636D9841D83AD6900331745 /* Button+Style.swift in Sources */,
 				26246E1F1D810A5A00F44CDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +314,7 @@
 		26246E2E1D810A5A00F44CDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9Y9KG3KBHJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -309,6 +332,7 @@
 		26246E2F1D810A5A00F44CDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9Y9KG3KBHJ;
 				FRAMEWORK_SEARCH_PATHS = (

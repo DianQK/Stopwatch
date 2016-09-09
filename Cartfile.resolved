@@ -1,2 +1,3 @@
-github "ReactiveX/RxSwift" "c99a49aa66ea830780bd3be1f11b3bac2b690c90"
+github "ReactiveX/RxSwift" "769dabbc06ecdb92971856e9fa2883cafab02a78"
 github "DianQK/RxAutomaton" "9ab6f8ef35f87ddc839c0b8b56debef6422e063a"
+github "DianQK/RxExtensions" "034754bdb2fd4af1e707e0c4b5e78fd14c894d6b"
