@@ -22,6 +22,12 @@
 		26660A661D81CB22007442E2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A601D81CB22007442E2 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26660A671D81CB22007442E2 /* RxAutomaton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A611D81CB22007442E2 /* RxAutomaton.framework */; };
 		26660A681D81CB22007442E2 /* RxAutomaton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26660A611D81CB22007442E2 /* RxAutomaton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		269268DD1D869D25000F2263 /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269268DC1D869D25000F2263 /* BasicViewModel.swift */; };
+		269268DF1D869D5B000F2263 /* TimingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269268DE1D869D5B000F2263 /* TimingViewModel.swift */; };
+		269268E11D869D79000F2263 /* StopwatchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269268E01D869D79000F2263 /* StopwatchViewModelProtocol.swift */; };
+		269268E31D869DD7000F2263 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269268E21D869DD7000F2263 /* Tool.swift */; };
+		269268E51D869E43000F2263 /* StopwatchTypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269268E41D869E43000F2263 /* StopwatchTypeListViewController.swift */; };
+		269268E71D86A97E000F2263 /* Cell+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269268E61D86A97E000F2263 /* Cell+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +61,12 @@
 		2636D9BD1D83F89000331745 /* RxExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxExtensions.framework; path = Carthage/Build/iOS/RxExtensions.framework; sourceTree = "<group>"; };
 		26660A601D81CB22007442E2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		26660A611D81CB22007442E2 /* RxAutomaton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAutomaton.framework; path = Carthage/Build/iOS/RxAutomaton.framework; sourceTree = "<group>"; };
+		269268DC1D869D25000F2263 /* BasicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
+		269268DE1D869D5B000F2263 /* TimingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingViewModel.swift; sourceTree = "<group>"; };
+		269268E01D869D79000F2263 /* StopwatchViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchViewModelProtocol.swift; sourceTree = "<group>"; };
+		269268E21D869DD7000F2263 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
+		269268E41D869E43000F2263 /* StopwatchTypeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchTypeListViewController.swift; sourceTree = "<group>"; };
+		269268E61D86A97E000F2263 /* Cell+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,9 @@
 				2636D9C01D83FA6100331745 /* unimportant */,
 				26246E201D810A5A00F44CDA /* ViewController.swift */,
 				2636D97F1D83144A00331745 /* FinalViewModel.swift */,
+				269268DE1D869D5B000F2263 /* TimingViewModel.swift */,
+				269268DC1D869D25000F2263 /* BasicViewModel.swift */,
+				269268E01D869D79000F2263 /* StopwatchViewModelProtocol.swift */,
 			);
 			path = Stopwatch;
 			sourceTree = "<group>";
@@ -105,12 +120,15 @@
 		2636D9C01D83FA6100331745 /* unimportant */ = {
 			isa = PBXGroup;
 			children = (
+				269268E41D869E43000F2263 /* StopwatchTypeListViewController.swift */,
+				269268E61D86A97E000F2263 /* Cell+Rx.swift */,
 				26246E1E1D810A5A00F44CDA /* AppDelegate.swift */,
 				2636D9831D83AD6900331745 /* Button+Style.swift */,
 				26246E221D810A5A00F44CDA /* Main.storyboard */,
 				26246E251D810A5A00F44CDA /* Assets.xcassets */,
 				26246E271D810A5A00F44CDA /* LaunchScreen.storyboard */,
 				26246E2A1D810A5A00F44CDA /* Info.plist */,
+				269268E21D869DD7000F2263 /* Tool.swift */,
 			);
 			name = unimportant;
 			sourceTree = "<group>";
@@ -189,9 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269268E11D869D79000F2263 /* StopwatchViewModelProtocol.swift in Sources */,
 				2636D9801D83144A00331745 /* FinalViewModel.swift in Sources */,
 				26246E211D810A5A00F44CDA /* ViewController.swift in Sources */,
+				269268E71D86A97E000F2263 /* Cell+Rx.swift in Sources */,
+				269268E31D869DD7000F2263 /* Tool.swift in Sources */,
 				2636D9841D83AD6900331745 /* Button+Style.swift in Sources */,
+				269268E51D869E43000F2263 /* StopwatchTypeListViewController.swift in Sources */,
+				269268DD1D869D25000F2263 /* BasicViewModel.swift in Sources */,
+				269268DF1D869D5B000F2263 /* TimingViewModel.swift in Sources */,
 				26246E1F1D810A5A00F44CDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

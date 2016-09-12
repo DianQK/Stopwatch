@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var startButton: UIButton!
     @IBOutlet private weak var lapsTableView: UITableView!
+    
+    var type: StopwatchViewModelProtocol.Type = FinalViewModel.self
 
-    private lazy var viewModel: StopwatchViewModelProtocol = FinalViewModel(input: (
+    private lazy var viewModel: StopwatchViewModelProtocol = self.type.init(input: (
         startAStopTrigger: self.startButton.rx.tap.asObservable(),
         resetALapTrigger: self.resetButton.rx.tap.asObservable())
     )
@@ -35,4 +37,5 @@ class ViewController: UIViewController {
             .addDisposableTo(rx.disposeBag)
 
     }
+
 }

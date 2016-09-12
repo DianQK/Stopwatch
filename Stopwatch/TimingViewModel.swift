@@ -1,8 +1,8 @@
 //
-//  FinalViewModel.swift
+//  TimingViewModel.swift
 //  Stopwatch
 //
-//  Created by DianQK on 10/09/2016.
+//  Created by DianQK on 12/09/2016.
 //  Copyright © 2016 T. All rights reserved.
 //
 
@@ -12,8 +12,8 @@ import RxCocoa
 import RxAutomaton
 import RxExtensions
 
-struct FinalViewModel: StopwatchViewModelProtocol {
-
+struct TimingViewModel: StopwatchViewModelProtocol {
+    
     let startAStopStyle: Observable<Style.Button>
     let resetALapStyle: Observable<Style.Button>
     let displayTime: Observable<String>
@@ -82,7 +82,7 @@ struct FinalViewModel: StopwatchViewModelProtocol {
                 case .timing:
                     return Style.Button(title: "Lap", titleColor: UIColor.white, isEnabled: true, backgroungImage: #imageLiteral(resourceName: "gray"))
                 }
-            }
+        }
         
         startAStopStyle = state
             .map { state in
@@ -95,7 +95,7 @@ struct FinalViewModel: StopwatchViewModelProtocol {
                     return Style.Button(title: "Stop", titleColor: Tool.Color.red, isEnabled: true, backgroungImage: #imageLiteral(resourceName: "red"))
                 }
         }
-
+        
         let timeInfo = automaton.state.asObservable()
             .flatMapLatest { state -> Observable<State> in
                 switch state {
@@ -137,42 +137,22 @@ struct FinalViewModel: StopwatchViewModelProtocol {
         
         displayElements = timeInfo
             .sample(lap)
-            .scan((preTime: 0, max: 0, min: 0, info: [(lap: String, time: Observable<TimeInterval>)]())) { (acc, x) -> (preTime: TimeInterval, max: TimeInterval, min: TimeInterval, info: [(lap: String, time: Observable<TimeInterval>)]) in
+            .scan((preTime: 0, info: [(lap: String, time: Observable<TimeInterval>)]())) { (acc, x) -> (preTime: TimeInterval, info: [(lap: String, time: Observable<TimeInterval>)]) in
                 switch x.state {
                 case .reseted:
-                    return (preTime: 0, max: 0, min: 0, info: [])
+                    return (preTime: 0, info: [])
                 case .timing, .stopped:
-                    let offset = x.time - acc.preTime
-                    if let _ = acc.info.first {
-                        let info = [(lap: "Lap \(acc.info.count + 1)", time: timeInfo.map { $0.time - x.time }), (lap: "Lap \(acc.info.count)", time: Observable<TimeInterval>.just(offset))]
-                            + acc.info.dropFirst()
-                        return (preTime: x.time, max: offset >= acc.max ? offset : acc.max, min: offset <= acc.min ?offset : acc.min, info: info)
-                    } else {
-                        return (preTime: 0, max: 0, min: Double.infinity, info: [(lap: "Lap 1", time: timeInfo.map { $0.time })])
-                    }
+                    let info = [(lap: "Lap \(acc.info.count + 1)", time: Observable.just(x.time))] + acc.info
+                    return (preTime: x.time, info: info)
                 }
             }
-            .map { (info) in
-                info.info.map { element in
-                    return (
-                        title: Observable.just(element.lap),
-                        displayTime: element.time.map(Tool.convertToTimeInfo),
-                        color: element.time.take(1)
-                            .map { time -> UIColor in
-                            guard info.max != info.min && time != 0 else {
-                                return UIColor.white
-                            }
-                            if time == info.max {
-                                return Tool.Color.red
-                            } else if time == info.min {
-                                return Tool.Color.green
-                            } else {
-                                return UIColor.white
-                            }
-                        }
-                    )
-                }
+            .map { $0.info.map { element in
+                return (
+                    title: Observable.just(element.lap),
+                    displayTime: element.time.map(Tool.convertToTimeInfo),
+                    color: Observable.just(UIColor.white)
+                )
             }
+        }
     }
-
 }
